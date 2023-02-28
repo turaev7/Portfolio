@@ -1,0 +1,68 @@
+{% extends 'blog/index.html' %}
+{% load static %}
+
+{% block service %}
+<section id="service" class="services-mf route">
+    <div class="container">
+      
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Services
+            </h3>
+            <p class="subtitle-a">
+              For you services I am here).
+            </p>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      {% for service in Info %}
+      <div class="row">
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-monitor"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">{{ service.service_1 }}</h2>
+              <p class="s-description text-center">
+                {{ service.service_1_info }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-code-working"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">{{ service.service_2 }}</h2>
+              <p class="s-description text-center">
+                {{ service.service_2_info }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-camera"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">{{ service.service_3 }}</h2>
+              <p class="s-description text-center">
+                {{ service.service_3_info }}
+              </p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      {% endfor %}
+    </div>
+    
+
+  {% endblock service  %}
